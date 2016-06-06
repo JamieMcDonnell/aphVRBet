@@ -1,0 +1,25 @@
+.letter{
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 0 10px 10px 0;
+    color: green;
+    font-size: 30px;
+    float:left;
+    width: 1em;
+    text-align: center;
+    cursor: pointer;
+}
+.letter.over{
+    color: white;
+    background-color: green;
+}
+#chosenWord.wrong{
+    color: red;
+}
+#chosenWord.right{
+    color: green;
+}
+.clear{
+    clear: both;
+}

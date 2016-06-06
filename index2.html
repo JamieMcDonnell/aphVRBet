@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Alphabet Spelling Game for VR</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/game.css" rel="stylesheet">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="js/game/game.js"></script>
+    </head>
+    <body>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="cs">Cesky</option>
+        </select>
+        <select id="difficulty">
+            <option value="1">Age 4-6 Years</option>
+            <option value="2">Age 7-9 Years</option>
+            <option value="3">Age 10-12 Years</option>
+        </select>
+        <div id="aphVRBet_canvas"></div>
+        <h1 id="chosenWord" class="clear"></h1>
+        <button id="speak">Say the word</button>
+        <script>
+            $(function() {
+                var options = {
+                    language: $("#language").val(),
+                    difficulty: parseInt($("#difficulty").val())
+                };
+                var aphVRBet = new aphVRBetGame(options);
+                aphVRBet.start_game();
+            });
+            
+        </script>
+    </body>
+</html>
